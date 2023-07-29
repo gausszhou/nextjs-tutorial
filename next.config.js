@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     domains: [
       "imges.pexels.com",
-      "gausszhou.top", 
+      "static.gausszhou.top", 
     ]
   }
 } 

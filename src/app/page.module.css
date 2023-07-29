@@ -24,7 +24,7 @@
 }
 
 .button {
-  font-size: 24px;
+  font-size: 20px;
   padding: 20px;
   cursor: pointer;
   background-color: #53c28b;
@@ -32,4 +32,19 @@
   border-radius: 4px;
   width: max-content;
   color: white;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+  animation: move 3s infinite ease alternate;
+}
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(10px);
+  }
 }
