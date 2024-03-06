@@ -1,3 +1,6 @@
+.container {
+}
+
 .catTitle {
   color: #53c28b;
 }
@@ -9,7 +12,7 @@
   margin-bottom: 100px;
 }
 
-.item:nth-child(2n){
+.item:nth-child(2n+1){
   flex-direction: row-reverse;
 }
 

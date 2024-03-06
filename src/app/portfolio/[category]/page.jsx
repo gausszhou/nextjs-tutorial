@@ -12,7 +12,7 @@ const Category = ({ params }) => {
           <p className={styles.desc}>Desc</p>
         </div>
         <div className={styles.imgContainer}>
-          <Image></Image>
+          <Image alt="1"></Image>
         </div>
       </div>
     </div>

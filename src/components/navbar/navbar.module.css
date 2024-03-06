@@ -20,12 +20,16 @@
   font-size: 18px;
 }
 
-.logout {
+.activeLink {
   font-size: 18px;
+  color: #53c28b;
+}
+
+.logout {
   padding: 5px;
   border: none;
   background-color: #53c28b;
   color: white;
-  border-radius: 4px;
   cursor: pointer;
+  border-radius: 3px;
 }

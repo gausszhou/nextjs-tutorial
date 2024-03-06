@@ -11,10 +11,10 @@ export default function Home() {
         <p className={styles.desc}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate veniam exercitationem facilis placeat voluptas blanditiis, deserunt dolorum cumque, pariatur vero corrupti consequatur impedit, repudiandae quaerat illo accusamus ipsam. Molestiae!
         </p>
-        <LinkButton  url="/portfolio" text="See Our Works"></LinkButton>
+        <LinkButton url="/portfolio" text="See Our Works"></LinkButton>
       </div>
       <div className={styles.item}>
-        <Image className={styles.image} width={500} height={500} src={Hero}></Image>
+        <Image className={styles.image} width={500} height={500} src={Hero} alt="1"></Image>
       </div>
     </div>
   );

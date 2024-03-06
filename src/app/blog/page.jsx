@@ -2,27 +2,38 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-const Blog = () => {
+
+async function getData() {
+  return []
+}
+
+const Blog = async () => {  
+  const data = await getData();
+
+  if (data.length === 0){
+    return <div>No Data</div>
+  }
+
   return (
     <div className={styles.mainContainer}>
-      <Link href="/blog/test" className={styles.container}>
-        <div className={styles.imgContainer}>
-          <Image src="https://static.gausszhou.top/data/image/learn/cheatsheet/boxmodel.png" width={320} height={180}></Image>
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>Box Model</h1>
-          <p className={styles.desc}>Desc</p>
-        </div>  
-      </Link>
-      <Link href="/blog/test" className={styles.container}>
-        <div className={styles.imgContainer}>
-          <Image src="https://static.gausszhou.top/data/image/learn/cheatsheet/flexbox.png" width={320} height={180}></Image>
-        </div>
-        <div className={styles.content}>
-          <h1 className={styles.title}>Flex Box</h1>
-          <p className={styles.desc}>Desc</p>
-        </div>
-      </Link>
+      {data.map((item, index) => {
+        return (
+          <Link href={`/blog/${item.id}`} className={styles.container} key={index}>
+            <div className={styles.imgContainer}>
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={320}
+                height={180}
+              ></Image>
+            </div>
+            <div className={styles.content}>
+              <h1 className={styles.title}>{item.title}</h1>
+              <p className={styles.desc}>{item.body}</p>
+            </div>
+          </Link>
+        );
+      })}
     </div>
   );
 };
